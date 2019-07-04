@@ -9,9 +9,10 @@
     "build": "node ./scripts/build.js",
     "build-lib": "babel ./modules -d . --copy-files",
     "release": "node ./scripts/release.js",
-    "prepublish": "node ./scripts/build.js",
+    "prepublish": "npm run snyk-protect; node ./scripts/build.js",
     "lint": "eslint modules",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "archiver": "^1.0.0",
@@ -29,7 +30,8 @@
     "react-dom": "^15.0.2",
     "redis": "^2.6.2",
     "semver": "^5.0.3",
-    "tar-fs": "^1.8.1"
+    "tar-fs": "^1.8.1",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -44,5 +46,6 @@
     "eslint-plugin-react": "^6.0.0",
     "in-publish": "^2.0.0",
     "readline-sync": "^1.4.1"
-  }
+  },
+  "snyk": true
 }
