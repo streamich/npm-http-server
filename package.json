@@ -14,7 +14,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "archiver": "^1.0.0",
+    "archiver": "^4.0.2",
     "byte-size": "^2.0.0",
     "csso": "^2.0.0",
     "debug": "^2.2.0",
